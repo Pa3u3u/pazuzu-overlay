@@ -8,8 +8,6 @@ HOMEPAGE="https://github.com/tldr-pages/tldr-c-client"
 
 LICENSE="MIT"
 SLOT="0"
-KEYWORDS=""
-IUSE=""
 
 DEPEND="
 	net-misc/curl
