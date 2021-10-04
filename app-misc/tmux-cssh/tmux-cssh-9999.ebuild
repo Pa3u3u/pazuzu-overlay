@@ -8,7 +8,6 @@ HOMEPAGE="https://github.com/peikk0/tmux-cssh"
 
 LICENSE="MIT"
 SLOT="0"
-IUSE=""
 
 DEPEND=""
 RDEPEND="${DEPEND}
