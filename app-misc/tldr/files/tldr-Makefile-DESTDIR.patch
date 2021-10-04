@@ -1,0 +1,14 @@
+--- tldr-1.3.0/Makefile.orig	2021-10-04 15:24:42.271164869 +0200
++++ tldr-1.3.0/Makefile	2021-10-04 15:24:43.872136443 +0200
+@@ -17,7 +17,11 @@
+ CFLAGS		:= -ggdb -O0 -march=native -ftrapv
+ CPPFLAGS	:=
+ LDFLAGS		:=
++ifdef DESTDIR
++PREFIX      := $(DESTDIR)/usr
++else
+ PREFIX		:= /usr/local
++endif
+ TARGET_ARCH :=
+ 
+ 
