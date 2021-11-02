@@ -5,7 +5,7 @@
  CPPFLAGS	:=
  LDFLAGS		:=
 +ifdef DESTDIR
-+PREFIX      := $(DESTDIR)/usr
++PREFIX		:= $(DESTDIR)/usr
 +else
  PREFIX		:= /usr/local
 +endif
