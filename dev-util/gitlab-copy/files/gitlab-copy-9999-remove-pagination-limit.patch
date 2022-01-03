@@ -1,0 +1,159 @@
+From ce75fa6b725168796be76944f55a37f5c4f3ebac Mon Sep 17 00:00:00 2001
+From: skwi <cedric.spalvieri@gmail.com>
+Date: Thu, 14 Mar 2019 16:47:46 +0100
+Subject: [PATCH 1/2] Remove pagination limit on label copy
+
+---
+ migration/issue.go | 18 +++++++++++++++---
+ stats/project.go   | 25 +++++++++++++++++++------
+ 2 files changed, 34 insertions(+), 9 deletions(-)
+
+diff --git a/migration/issue.go b/migration/issue.go
+index 857ea9b..6091ec8 100644
+--- a/migration/issue.go
++++ b/migration/issue.go
+@@ -22,6 +22,7 @@ var (
+ const (
+ 	// ResultsPerPage is the Number of results per page.
+ 	ResultsPerPage = 100
++	LabelsPerPage = 100
+ )
+ 
+ // Endpoint refers to the GitLab server endpoints.
+@@ -313,10 +314,21 @@ func (m *Migration) Migrate() error {
+ 	s := make([]issueId, 0)
+ 
+ 	// Copy all source labels on target
+-	labels, _, err := source.ListLabels(srcProjectID, nil)
+-	if err != nil {
+-		return fmt.Errorf("source: can't fetch labels: %s", err.Error())
++	currentLabelPage := 1
++	labels := make([]*glab.Label, 0)
++	for {
++		paginatedLabels, _, err := source.ListLabels(srcProjectID, &glab.ListLabelsOptions{PerPage: LabelsPerPage, Page: currentLabelPage})
++		if err != nil {
++			return fmt.Errorf("source: can't fetch labels: %s", err.Error())
++		}
++		if len(paginatedLabels) == 0 {
++			break
++		}
++
++		labels = append(labels, paginatedLabels...)
++		currentLabelPage++
+ 	}
++
+ 	fmt.Printf("Found %d labels ...\n", len(labels))
+ 	for _, label := range labels {
+ 		clopts := &glab.CreateLabelOptions{Name: &label.Name, Color: &label.Color, Description: &label.Description}
+diff --git a/stats/project.go b/stats/project.go
+index 4272561..dab14a3 100644
+--- a/stats/project.go
++++ b/stats/project.go
+@@ -9,6 +9,10 @@ import (
+ 	glab "github.com/xanzy/go-gitlab"
+ )
+ 
++const (
++	LabelsPerPage = 100
++)
++
+ type ProjectStats struct {
+ 	Project                               *glab.Project
+ 	NbIssues, NbClosed, NbOpened, NbNotes int
+@@ -84,13 +88,22 @@ func (p *ProjectStats) ComputeStats(client gitlab.GitLaber) error {
+ 		return err
+ 	}
+ 
+-	labels, _, err := client.ListLabels(p.Project.ID, nil)
+-	if err != nil {
+-		return fmt.Errorf("source: can't fetch labels: %s", err.Error())
+-	}
+-	for _, label := range labels {
+-		p.Labels[label.Name]++
++	currentLabelPage := 1
++	for {
++		paginatedLabels, _, err := client.ListLabels(p.Project.ID, &glab.ListLabelsOptions{PerPage: LabelsPerPage, Page: currentLabelPage})
++		if err != nil {
++			return fmt.Errorf("source: can't fetch labels: %s", err.Error())
++		}
++		if len(paginatedLabels) == 0 {
++			break
++		}
++
++		for _, label := range paginatedLabels {
++			p.Labels[label.Name]++
++		}
++		currentLabelPage++
+ 	}
++
+ 	return nil
+ }
+ 
+
+From 7b51eba86f608d4454aaa05629c4b83f6de9a356 Mon Sep 17 00:00:00 2001
+From: skwi <cedric.spalvieri@gmail.com>
+Date: Mon, 18 Mar 2019 14:56:20 +0100
+Subject: [PATCH 2/2] Add tests for multiple page label copy
+
+---
+ migration/client_test.go | 11 ++++++++++-
+ migration/issue_test.go  | 17 +++++++++++++++++
+ 2 files changed, 27 insertions(+), 1 deletion(-)
+
+diff --git a/migration/client_test.go b/migration/client_test.go
+index f0dde79..97eed18 100644
+--- a/migration/client_test.go
++++ b/migration/client_test.go
+@@ -21,6 +21,7 @@ type fakeClient struct {
+ 		baseURL                                                      error
+ 	}
+ 	labels                   []*glab.Label
++	labelsPage2              []*glab.Label
+ 	milestones               []*glab.Milestone
+ 	users                    []*glab.User
+ 	issues                   []*glab.Issue
+@@ -91,7 +92,15 @@ func (c *fakeClient) ListLabels(id interface{}, opt *glab.ListLabelsOptions, opt
+ 	if err != nil {
+ 		return nil, nil, err
+ 	}
+-	return c.labels, nil, nil
++
++	switch page := opt.Page; page {
++	case 1:
++		return c.labels, nil, nil
++	case 2:
++		return c.labelsPage2, nil, nil
++	default:
++		return make([]*glab.Label, 0), nil, nil
++	}
+ }
+ 
+ func (c *fakeClient) ListMilestones(id interface{}, opt *glab.ListMilestonesOptions, options ...glab.OptionFunc) ([]*glab.Milestone, *glab.Response, error) {
+diff --git a/migration/issue_test.go b/migration/issue_test.go
+index d8954ec..7291e87 100644
+--- a/migration/issue_test.go
++++ b/migration/issue_test.go
+@@ -66,6 +66,23 @@ func TestMigrate(t *testing.T) {
+ 				}
+ 			},
+ 		},
++		{
++			"copy multiple pages labels",
++			cfg1,
++			func(src, dst *fakeClient) {
++				src.labels = makeLabels("bug", "doc")
++				src.labelsPage2 = makeLabels("foo", "bar")
++			},
++			func(err error, src, dst *fakeClient) {
++				require.NoError(err)
++				if assert.Equal(4, len(dst.labels)) {
++					assert.Equal("bug", dst.labels[0].Name)
++					assert.Equal("doc", dst.labels[1].Name)
++					assert.Equal("foo", dst.labels[2].Name)
++					assert.Equal("bar", dst.labels[3].Name)
++				}
++			},
++		},
+ 		{
+ 			"copy 1 label and 2 issues",
+ 			cfg2,
