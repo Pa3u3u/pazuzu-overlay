@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>Roman Lacko</name>
+		<email>xlacko1@fi.muni.cz</email>
+		<description>Repository maintainer</description>
+	</maintainer>
+	<upstream>
+		<changelog>https://github.com/tldr-pages/tldr-c-client/blob/master/CHANGELOG.md</changelog>
+		<doc>https://github.com/tldr-pages/tldr-c-client/blob/master/README.md</doc>
+		<bugs-to>https://github.com/tldr-pages/tldr-c-client/issues</bugs-to>
+		<remote-id type="github">tldr-pages/tldr-c-client</remote-id>
+	</upstream>
+</pkgmetadata>

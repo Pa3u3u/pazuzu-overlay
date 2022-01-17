@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>Roman Lacko</name>
+		<email>xlacko1@fi.muni.cz</email>
+		<description>Repository maintainer</description>
+	</maintainer>
+	<longdescription>
+		gitlab-copy is a simple tool for copying issues, labels, milestones or notes
+		from one GitLab project to another, possibly running on different GitLab instances.
+	</longdescription>
+	<upstream>
+		<maintainer>
+			<name>Mathias Monnerville</name>
+		</maintainer>
+		<maintainer>
+			<name>Anthony Baillard</name>
+		</maintainer>
+		<changelog>https://github.com/gotsunami/gitlab-copy/blob/master/CHANGELOG</changelog>
+		<doc>https://github.com/gotsunami/gitlab-copy/blob/master/README.md</doc>
+		<bugs-to>https://github.com/gotsunami/gitlab-copy/issues</bugs-to>
+		<remote-id type="github">gotsunami/gitlab-copy</remote-id>
+	</upstream>
+</pkgmetadata>

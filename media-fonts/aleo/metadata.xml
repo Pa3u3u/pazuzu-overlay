@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>Roman Lacko</name>
+		<email>xlacko1@fi.muni.cz</email>
+		<description>Repository maintainer</description>
+	</maintainer>
+	<longdescription>
+		Aleo is a contemporary typeface designed by Alessio Laiso as the slab
+		serif companion to the Lato font by Łukasz Dziedzic. Aleo has
+		semi-rounded details and a sleek structure, giving it a strong
+		personality while still keeping readability high. The family comprises
+		six styles: three weights (light, regular and bold) with corresponding
+		true italics.
+	</longdescription>
+	<upstream>
+		<maintainer>
+			<name>Alessio Laiso</name>
+			<email>hello@alessiolaiso.com</email>
+		</maintainer>
+		<changelog>https://github.com/AlessioLaiso/aleo/blob/master/FONTLOG.txt</changelog>
+		<bugs-to>https://github.com/AlessioLaiso/aleo/issues</bugs-to>
+		<remote-id type="github">AlessioLaiso/aleo</remote-id>
+	</upstream>
+</pkgmetadata>
