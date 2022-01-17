@@ -44,7 +44,7 @@ src_unpack() {
 	if [ "${PV}" = "9999" ]; then
 		git-r3_src_unpack
 
-		pushd ${S}
+		pushd "${S}"
 		rm "Gopkg.lock" "Gopkg.toml"
 		cp "${FILESDIR}/go.mod" "go.mod"
 
