@@ -3,7 +3,7 @@
 
 EAPI=7
 
-DESCRIPTION="Spawns multiple synchronized SSH sessions inside a tmux session."
+DESCRIPTION="Spawns multiple synchronized SSH sessions inside a tmux session"
 HOMEPAGE="https://github.com/peikk0/tmux-cssh"
 
 LICENSE="MIT"

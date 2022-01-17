@@ -3,7 +3,7 @@
 
 EAPI=7
 
-DESCRIPTION="Aleo is a contemporary typeface."
+DESCRIPTION="A readable font with semi-rounded details and sleek structure"
 HOMEPAGE="https://github.com/AlessioLaiso/aleo"
 
 LICENSE="MIT"

@@ -3,7 +3,7 @@
 
 EAPI=7
 
-DESCRIPTION="Community-maintained help pages for command-line tools."
+DESCRIPTION="Community-maintained help pages for command-line tools"
 HOMEPAGE="https://github.com/tldr-pages/tldr-c-client"
 
 LICENSE="MIT"
