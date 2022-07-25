@@ -40,8 +40,6 @@ src_unpack() {
 	unzip VictorMonoAll.zip
 }
 
-FONT_S=()
-
 src_install() {
 	for font_flag in ${font_iuse_flags}; do
 		font_type=$(echo ${font_flag} | tr -d '+-')
