@@ -14,7 +14,7 @@ DEPEND="
 	dev-libs/libzip"
 RDEPEND="${DEPEND}"
 BDEPEND="
-	app-arch/zip"
+	app-arch/unzip"
 
 go_name="github.com/gotsunami/gitlab-copy"
 base_uri="https://${go_name}"
