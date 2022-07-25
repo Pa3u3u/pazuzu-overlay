@@ -17,8 +17,7 @@ inherit font git-r3
 
 EGIT_REPO_URI="https://github.com/AlessioLaiso/${PN}/"
 
-if [[ ${PV} != "9999" ]]; then
-	KEYWORDS="~amd64 ~x86"
+if [ ${PV} != "9999" ]; then
 	EGIT_COMMIT="${PV}"
 fi
 
