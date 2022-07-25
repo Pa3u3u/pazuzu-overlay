@@ -15,7 +15,6 @@ DEPEND="
 RDEPEND="${DEPEND}"
 BDEPEND="
 	sys-devel/gcc
-	app-arch/zip
 	virtual/pkgconfig"
 
 PATCHES=(
@@ -31,7 +30,7 @@ case "${PV}" in
 		;;
 	*)
 		KEYWORDS="~amd64 ~x86"
-		SRC_URI="${base_uri}/archive/refs/tags/v${PV}.zip -> ${P}.zip"
+		SRC_URI="${base_uri}/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
 		;;
 esac
 
