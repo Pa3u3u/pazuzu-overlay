@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>Roman Lacko</name>
+		<email>xlacko1@fi.muni.cz</email>
+		<description>Repository maintainer</description>
+	</maintainer>
+	<use>
+		<flag name="otf">Install the OpenType version of the font</flag>
+		<flag name="ttf">Install the TrueType version of the font</flag>
+		<flag name="eot">Install the Embedded Open Type version of the font</flag>
+		<flag name="woff">Install the Web Open Font Format version of the font</flag>
+		<flag name="woff2">Install the Web Open Font Format version 2 of the font</flag>
+	</use>
+	<longdescription>
+		Victor Mono is an open-source monospaced font with optional
+		semi-connected cursive italics and programming symbol ligatures. The
+		typeface is slender, crisp and narrow, with a large x-height and clear
+		punctuation, making it legible and ideal for code. It comes in seven
+		weights and Roman, Italic and Oblique styles.
+	</longdescription>
+	<upstream>
+		<maintainer>
+			<name>Rune Bjørnerås</name>
+			<email>victor.mono.font@gmail.com</email>
+		</maintainer>
+		<bugs-to>https://github.com/rubjo/victor-mono/issues</bugs-to>
+		<remote-id type="github">rubjo/victor-mono</remote-id>
+	</upstream>
+</pkgmetadata>
