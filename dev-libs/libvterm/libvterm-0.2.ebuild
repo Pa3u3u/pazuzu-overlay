@@ -18,7 +18,7 @@ BDEPEND="
 	sys-devel/libtool
 	virtual/pkgconfig
 "
-RDEPEND="!dev-libs/libvterm-neovim"
+RDEPEND=""
 
 src_compile() {
 	tc-export CC
