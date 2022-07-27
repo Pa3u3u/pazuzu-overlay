@@ -3,7 +3,7 @@
 
 EAPI=7
 
-DESCRIPTION="Desktop notifications and reminders"
+DESCRIPTION="Unicode character identification and other tools"
 HOMEPAGE="https://gitlab.fi.muni.cz/xlacko1/unicode-tools"
 
 LICENSE="WTFPL-2"
