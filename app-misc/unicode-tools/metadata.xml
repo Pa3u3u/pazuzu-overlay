@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>Roman Lacko</name>
+		<email>xlacko1@fi.muni.cz</email>
+		<description>Repository maintainer</description>
+	</maintainer>
+	<use>
+		<flag name="unicode">Install 'unicode' script for character
+			identification and other Unicode database quieris</flag>
+		<flag name="unifont">Install 'unifont' script to convert Latin
+			characters into other scripts, like italic or bold.</flag>
+	</use>
+</pkgmetadata>
