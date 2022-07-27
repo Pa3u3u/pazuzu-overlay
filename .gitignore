@@ -1,2 +1,5 @@
 # Ignore VIM swap files
 *.swp
+
+# Ignore cache
+metadata/md5-cache
