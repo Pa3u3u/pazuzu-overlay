@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>Roman Lacko</name>
+		<email>xlacko1@fi.muni.cz</email>
+		<description>Repository maintainer</description>
+	</maintainer>
+	<longdescription>
+		An open source Spotify client running as a UNIX daemon. Spotifyd streams
+		music just like the official client, but is more lightweight and
+		supports more platforms. Spotifyd also supports the Spotify Connect
+		protocol which makes it show up as a device that can be controlled from
+		the official clients.
+	</longdescription>
+	<use>
+		<flag name="rodio">Add support for Rust playback library</flag>
+	</use>
+	<upstream>
+		<changelog>https://github.com/Spotifyd/spotifyd/blob/master/CHANGELOG.md</changelog>
+		<doc>https://spotifyd.github.io/spotifyd/</doc>
+		<bugs-to>https://github.com/Spotifyd/spotifyd/issues</bugs-to>
+		<remote-id type="github">Spotifyd/spotifyd</remote-id>
+	</upstream>
+</pkgmetadata>
