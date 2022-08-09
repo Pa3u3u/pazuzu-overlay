@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>Roman Lacko</name>
+		<email>xlacko1@fi.muni.cz</email>
+		<description>Repository maintainer</description>
+	</maintainer>
+	<use>
+		<flag name="browser">Build Keybase browser</flag>
+		<flag name="gui">Enable support for graphical user interface</flag>
+		<flag name="kbfs">Build Keybase filesystem</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">keybase/node-client</remote-id>
+	</upstream>
+</pkgmetadata>
