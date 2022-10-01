@@ -5,7 +5,6 @@ EAPI=8
 
 DESCRIPTION="Polybar module for showing currently played song"
 HOMEPAGE="https://github.com/PrayagS/polybar-spotify"
-SRC_URI="https://github.com/PrayagS/polybar-spotify"
 
 LICENSE="MIT"
 SLOT="0"
@@ -19,9 +18,20 @@ DEPEND="
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
-inherit git-r3
+EGIT_REPO_URI="https://github.com/PrayagS/polybar-spotify"
 
-EGIT_REPO_URI="${SRC_URI}"
+case "${PV}" in
+	20221001)
+		EGIT_COMMIT="d20a8ad"
+		;;
+	9999|99999999)
+		;;
+	*)
+		die "Invalid version ${PV}"
+		;;
+esac
+
+inherit git-r3
 
 src_prepare() {
 	eapply_user
