@@ -9,4 +9,7 @@
 	<use>
 		<flag name="unibilium">Add support for unibilium terminfo library</flag>
 	</use>
+	<upstream>
+		<remote-id type="github">leonerd/libtickit</remote-id>
+	</upstream>
 </pkgmetadata>
