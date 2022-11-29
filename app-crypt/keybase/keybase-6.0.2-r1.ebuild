@@ -43,7 +43,6 @@ BDEPEND="
 		sys-apps/yarn
 	)
 	kbfs? (
-		!app-crypt/kbfs
 		sys-fs/fuse
 	)
 "
