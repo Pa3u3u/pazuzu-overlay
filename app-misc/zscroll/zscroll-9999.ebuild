@@ -18,6 +18,7 @@ BDEPEND=""
 
 PYTHON_COMPAT=( python3_{8,9,10,11} )
 
+DISTUTILS_USE_PEP517=poetry
 inherit git-r3 distutils-r1
 
 distutils_enable_tests pytest

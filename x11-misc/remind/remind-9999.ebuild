@@ -31,7 +31,7 @@ src_compile() {
 	default
 
 	if use doc; then
-		ronn ${WORKDIR}/${P}/man/*.ronn
+		ronn "${WORKDIR}/${P}/man/*.ronn"
 	fi
 }
 
@@ -39,6 +39,6 @@ src_install() {
 	dobin remind
 
 	if use doc; then
-		doman ${WORKDIR}/${P}/man/remind.1
+		doman "${WORKDIR}/${P}/man/remind.1"
 	fi
 }

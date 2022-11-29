@@ -41,9 +41,9 @@ esac
 src_install() {
 	emake PREFIX="${D}/usr" LIBDIR="${D}/usr/lib64" install
 
-	sed -ie "s!${D}!!" ${D}/usr/$(get_libdir)/pkgconfig/tickit.pc
-	unlink ${D}/usr/$(get_libdir)/pkgconfig/tickit.pce
-	ln -s tickit.pc ${D}/usr/$(get_libdir)/pkgconfig/libtickit.pc
+	sed -ie "s!${D}!!" "${D}/usr/$(get_libdir)/pkgconfig/tickit.pc"
+	unlink "${D}/usr/$(get_libdir)/pkgconfig/tickit.pce"
+	ln -s tickit.pc "${D}/usr/$(get_libdir)/pkgconfig/libtickit.pc"
 
 	einstalldocs
 }

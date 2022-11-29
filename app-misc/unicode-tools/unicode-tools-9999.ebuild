@@ -44,7 +44,7 @@ src_compile() {
 				continue
 			fi
 
-			pod2man --utf8 ${WORKDIR}/${P}/${script} >${WORKDIR}/${P}/${script}.1
+			pod2man --utf8 "${WORKDIR}/${P}/${script}" >"${WORKDIR}/${P}/${script}.1"
 		done
 	fi
 }
@@ -57,10 +57,10 @@ src_install() {
 			continue
 		fi
 
-		dobin ${WORKDIR}/${P}/${script}
+		dobin "${WORKDIR}/${P}/${script}"
 
 		if use doc; then
-			doman ${WORKDIR}/${P}/${script}.1
+			doman "${WORKDIR}/${P}/${script}.1"
 		fi
 	done
 }
