@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>Roman Lacko</name>
+		<email>xlacko1@fi.muni.cz</email>
+		<description>Repository maintainer</description>
+	</maintainer>
+	<upstream>
+		<maintainer>
+			<name>Pablo Impallari</name>
+		</maintainer>
+		<bugs-to>https://github.com/impallari/Encode-Sans/issues</bugs-to>
+		<remote-id type="github">impallari/Encode-Sans</remote-id>
+	</upstream>
+</pkgmetadata>
