@@ -5,7 +5,6 @@ EAPI=8
 
 DESCRIPTION="A very simple, rounded, sans serif family"
 HOMEPAGE="https://github.com/impallari/Dosis"
-SRC_URI="https://github.com/impallari/Dosis"
 
 LICENSE="OFL-1.1"
 SLOT="0"

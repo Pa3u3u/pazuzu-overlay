@@ -5,7 +5,6 @@ EAPI=8
 
 DESCRIPTION="A humanist sans font"
 HOMEPAGE="https://github.com/impallari/Cabin"
-SRC_URI="https://github.com/impallari/Cabin"
 
 LICENSE="OFL-1.1"
 SLOT="0"

@@ -5,7 +5,6 @@ EAPI=8
 
 DESCRIPTION="A versatile sans family"
 HOMEPAGE="https://github.com/impallari/Encode-Sans"
-SRC_URI="https://github.com/impallari/Encode-Sans"
 
 LICENSE="OFL-1.1"
 SLOT="0"

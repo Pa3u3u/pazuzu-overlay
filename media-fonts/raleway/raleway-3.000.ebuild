@@ -5,7 +5,6 @@ EAPI=8
 
 DESCRIPTION="An elegant sans-serif typeface family"
 HOMEPAGE="https://github.com/impallari/Raleway"
-SRC_URI="https://github.com/impallari/Raleway"
 
 LICENSE="OFL-1.1"
 SLOT="0"
