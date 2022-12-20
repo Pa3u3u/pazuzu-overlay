@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>xlacko1@fi.muni.cz</email>
+		<name>Roman Lacko</name>
+	</maintainer>
+	<use>
+		<flag name="file">Enables optional dependency on sys-apps/file</flag>
+	</use>
+	<stabilize-allarches/>
+	<longdescription>
+		xfs_undelete tries to recover all files on an XFS filesystem marked as
+		deleted. You may also specify a date or age since deletion, and file
+		types to ignore or to recover exclusively.
+	</longdescription>
+	<upstream>
+		<remote-id type="github">ianka/xfs_undelete</remote-id>
+	</upstream>
+</pkgmetadata>
