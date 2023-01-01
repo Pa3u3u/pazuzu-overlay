@@ -11,7 +11,9 @@ SLOT="0"
 
 script_iuse_flags="
 	+unicode
-	unifont"
+	unifont
+	u8str
+"
 
 IUSE="
 	${script_iuse_flags}
@@ -19,11 +21,11 @@ IUSE="
 
 DEPEND=""
 RDEPEND="
-	>=dev-lang/perl-5.30
+	>=dev-lang/perl-5.34
 	${DEPEND}"
 BDEPEND=""
 
-REQUIRED_USE="|| ( unicode unifont )"
+REQUIRED_USE="|| ( unicode unifont u8str )"
 
 inherit git-r3
 

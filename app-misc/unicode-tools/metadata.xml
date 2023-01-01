@@ -11,5 +11,7 @@
 			identification and other Unicode database quieris</flag>
 		<flag name="unifont">Install 'unifont' script to convert Latin
 			characters into other scripts, like italic or bold.</flag>
+		<flag name="u8str"> Install 'u8str' script that replaces Unicode
+			character names with respective characters in strings.</flag>
 	</use>
 </pkgmetadata>
