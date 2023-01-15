@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>Roman Lacko</name>
+		<email>xlacko1@fi.muni.cz</email>
+		<description>Repository maintainer</description>
+	</maintainer>
+	<longdescription>
+		A small command-line application to view images from the terminal
+		written in Rust. It is basically the front-end of viuer. It uses either
+		iTerm or Kitty graphics protocol, if supported. If not, lower half
+		blocks (▄ or \u2584) are displayed instead.
+	</longdescription>
+	<upstream>
+		<doc>https://github.com/atanunq/viu/blob/master/README.md</doc>
+		<bugs-to>https://github.com/atanunq/viu/issues</bugs-to>
+		<remote-id type="github">atanunq/viu</remote-id>
+	</upstream>
+</pkgmetadata>
