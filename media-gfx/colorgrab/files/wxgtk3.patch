@@ -1,0 +1,15 @@
+
+
+diff --git a/src/tools/PaletteTool.cpp b/src/tools/PaletteTool.cpp
+index 5ec98dc..f53892a 100644
+--- a/src/tools/PaletteTool.cpp
++++ b/src/tools/PaletteTool.cpp
+@@ -173,7 +173,7 @@ void PaletteTool::RefreshTitle()
+ void PaletteTool::AddColor(const wxColour& color, const wxString& name)
+ {
+     wxVector<wxVariant> data;
+-    data.push_back(wxVariant(color));
++    data.push_back(wxVariant(wxAny(color)));
+     data.push_back(wxVariant(name));
+     colorList->AppendItem(data);
+     isSaved = false;
