@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>Roman Lacko</name>
+		<email>xlacko1@fi.muni.cz</email>
+		<description>Repository maintainer</description>
+	</maintainer>
+	<use>
+		<flag name="kirk-objects">Enable "objects from Kirk's version" patch</flag>
+		<flag name="yellow-submarine">Enable "yellow submarine" patch</flag>
+		<flag name="sword-fish">Enable "sword fish" patch</flag>
+	</use>
+	<upstream>
+		<bugs-to>https://github.com/cmatsuoka/asciiquarium/issues</bugs-to>
+		<remote-id type="github">cmatsouka/asciiquarium</remote-id>
+	</upstream>
+</pkgmetadata>
