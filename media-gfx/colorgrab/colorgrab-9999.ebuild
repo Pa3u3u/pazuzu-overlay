@@ -26,6 +26,7 @@ case "${PV}" in
 
 	0.3)
 		SRC_URI="https://github.com/nielssp/colorgrab/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"
+		KEYWORDS="~amd64 ~x86"
 		PATCHES+=( "${FILESDIR}/wxgtk3.patch" )
 		;;
 
