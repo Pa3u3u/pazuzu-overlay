@@ -31,7 +31,7 @@ src_compile() {
 	default
 
 	if use doc; then
-		ronn "${WORKDIR}/${P}/man/*.ronn"
+		ronn "${WORKDIR}/${P}/man/"*.ronn
 	fi
 }
 
