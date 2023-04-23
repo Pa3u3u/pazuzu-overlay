@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>Roman Lacko</name>
+		<email>xlacko1@fi.muni.cz</email>
+		<description>Repository maintainer</description>
+	</maintainer>
+	<upstream>
+		<maintainer>
+			<name>Anton Medvedev</name>
+		</maintainer>
+		<doc>https://github.com/antonmedv/countdown/blob/master/README.md</doc>
+		<bugs-to>https://github.com/antonmedv/countdown/issues</bugs-to>
+		<remote-id type="github">antonmedv/countdown</remote-id>
+	</upstream>
+</pkgmetadata>
+
