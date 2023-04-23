@@ -32,11 +32,11 @@ case "${PV}" in
 		)
 
 		EGIT_REPO_URI="${base_uri}"
-		SRC_URI+=("https://www.fi.muni.cz/~xlacko1/deps/${P}.deps.tar.xz")
+		SRC_URI="https://www.fi.muni.cz/~xlacko1/deps/${P}.deps.tar.xz"
 		;;
 	*)
 		KEYWORDS="~amd64 ~x86"
-		SRC_URI="${base_uri}/releases/download/v${PV}/gitlab-copy-v${PV}-linux-amd64.zip -> ${P}.zip"
+		SRC_URI="${base_uri}/releases/download/v${PV}/${PN}-v${PV}-linux-amd64.zip -> ${P}.zip"
 		;;
 esac
 
@@ -47,12 +47,11 @@ src_unpack() {
 	else
 		default_src_unpack
 
-		name_prefix="gitlab-copy"
-		if [ ! -d "${name_prefix}" ]; then
-	 		die "Expected directory '${name_prefix}' not found"
-	 	fi
+		if [ ! -d "${PN}" ]; then
+			die "Expected directory '${PN}' not found"
+		fi
 
-		mv "${name_prefix}" "${P}"
+		mv "${PN}" "${P}"
 	fi
 }
 
