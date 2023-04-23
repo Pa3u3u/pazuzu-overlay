@@ -1,0 +1,40 @@
+From eae24bfe103c16bdf67fd644e434ab23b0031c67 Mon Sep 17 00:00:00 2001
+From: Roman Lacko <xlacko1@fi.muni.cz>
+Date: Sun, 23 Apr 2023 13:45:42 +0200
+Subject: [PATCH] Explicitly initialize embedded ListOptions for paginated
+ label copy
+
+---
+ migration/issue.go | 2 +-
+ stats/project.go   | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/migration/issue.go b/migration/issue.go
+index eb6b72c..d1fc557 100644
+--- a/migration/issue.go
++++ b/migration/issue.go
+@@ -329,7 +329,7 @@ func (m *Migration) Migrate() error {
+ 	currentLabelPage := 1
+ 	labels := make([]*glab.Label, 0)
+ 	for {
+-		paginatedLabels, _, err := source.ListLabels(srcProjectID, &glab.ListLabelsOptions{PerPage: LabelsPerPage, Page: currentLabelPage})
++		paginatedLabels, _, err := source.ListLabels(srcProjectID, &glab.ListLabelsOptions{ListOptions: glab.ListOptions{PerPage: LabelsPerPage, Page: currentLabelPage}})
+ 		if err != nil {
+ 			return fmt.Errorf("source: can't fetch labels: %s", err.Error())
+ 		}
+diff --git a/stats/project.go b/stats/project.go
+index dab14a3..f4e9bac 100644
+--- a/stats/project.go
++++ b/stats/project.go
+@@ -90,7 +90,7 @@ func (p *ProjectStats) ComputeStats(client gitlab.GitLaber) error {
+ 
+ 	currentLabelPage := 1
+ 	for {
+-		paginatedLabels, _, err := client.ListLabels(p.Project.ID, &glab.ListLabelsOptions{PerPage: LabelsPerPage, Page: currentLabelPage})
++		paginatedLabels, _, err := client.ListLabels(p.Project.ID, &glab.ListLabelsOptions{ListOptions: glab.ListOptions{PerPage: LabelsPerPage, Page: currentLabelPage}})
+ 		if err != nil {
+ 			return fmt.Errorf("source: can't fetch labels: %s", err.Error())
+ 		}
+-- 
+2.39.2
+

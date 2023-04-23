@@ -21,16 +21,18 @@ base_uri="https://${go_name}"
 
 case "${PV}" in
 	9999)
-		inherit git-r3
+		inherit git-r3 go-module
 
 		BDEPEND="${BDEPEND}
-			>=dev-lang/go-1.5"
+			=dev-lang/go-1.20"
 
 		PATCHES=(
 			"${FILESDIR}/${P}-remove-pagination-limit.patch"
+			"${FILESDIR}/${P}-fix-embedded-struct.patch"
 		)
 
 		EGIT_REPO_URI="${base_uri}"
+		SRC_URI+=("https://www.fi.muni.cz/~xlacko1/deps/${P}.deps.tar.xz")
 		;;
 	*)
 		KEYWORDS="~amd64 ~x86"
@@ -39,44 +41,25 @@ case "${PV}" in
 esac
 
 src_unpack() {
-	default_src_unpack
-
-	if [ "${PV}" = "9999" ]; then
+	if [ "${PV}" = 9999 ]; then
 		git-r3_src_unpack
-
-		pushd "${S}"
-		rm "Gopkg.lock" "Gopkg.toml"
-		cp "${FILESDIR}/go.mod" "go.mod"
-
-		go mod tidy
-		go mod vendor
-		popd
+		go-module_src_unpack
 	else
+		default_src_unpack
+
 		name_prefix="gitlab-copy"
 		if [ ! -d "${name_prefix}" ]; then
-			die "Expected directory '${name_prefix}' not found"
-		fi
+	 		die "Expected directory '${name_prefix}' not found"
+	 	fi
 
 		mv "${name_prefix}" "${P}"
 	fi
 }
 
-src_configure() {
-	default_src_configure
-
-	if [ "${PV}" = "9999" ]; then
-		tools/version.sh
-	fi
-}
-
-src_compile() {
-	if [ "${PV}" = "9999" ]; then
-		go build -o ${PN} "${go_name}/cmd/gitlab-copy"
-	else
-		default_src_compile
-	fi
-}
-
 src_install() {
-	dobin ${PN}
+	if [ "${PV}" = 9999 ]; then
+		dobin bin/"${PN}"
+	else
+		dobin ${PN}
+	fi
 }
