@@ -21,7 +21,7 @@ IUSE="
 
 DEPEND=""
 RDEPEND="
-	>=dev-lang/perl-5.34
+	>=dev-lang/perl-5.36
 	${DEPEND}"
 BDEPEND=""
 
