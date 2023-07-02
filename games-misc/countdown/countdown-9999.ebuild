@@ -39,6 +39,10 @@ src_unpack() {
 	go-module_src_unpack
 }
 
+src_compile() {
+	ego build
+}
+
 src_install() {
-	dobin bin/"${PN}"
+	dobin "${PN}"
 }
