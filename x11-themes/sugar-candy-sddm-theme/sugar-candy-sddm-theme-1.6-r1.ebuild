@@ -11,7 +11,12 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="~amd64"
 
-RDEPEND=">=x11-misc/sddm-0.15"
+RDEPEND="
+	>=x11-misc/sddm-0.15
+	>=dev-qt/qtquickcontrols2-5.11
+	>=dev-qt/qtgraphicaleffects-5.11
+	>=dev-qt/qtsvg-5.11
+"
 
 src_unpack() {
 	default_src_unpack
