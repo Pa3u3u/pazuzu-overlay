@@ -7,7 +7,7 @@ DESCRIPTION="Server for DroidMote. Use your androd as remote mouse and keyboard"
 HOMEPAGE="http://www.videomap.it/"
 SRC_URI="https://www.fi.muni.cz/~xlacko1/deps/${P}.tar.gz"
 
-LICENSE="MIT"
+LICENSE="all-rights-reserved"
 SLOT="0"
 KEYWORDS="amd64"
 
