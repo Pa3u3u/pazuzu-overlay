@@ -17,7 +17,12 @@ BDEPEND=""
 
 IUSE="systemd"
 
-inherit systemd
+inherit systemd linux-info
+
+pkg_setup() {
+	CONFIG_CHECK="~INPUT_UINPUT"
+	linux-info_pkg_setup
+}
 
 src_install() {
 	dobin "droidmote"
