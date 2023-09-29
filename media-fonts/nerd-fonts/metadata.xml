@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>Roman Lacko</name>
+		<email>xlacko1@fi.muni.cz</email>
+		<description>Repository maintainer</description>
+	</maintainer>
+	<longdescription>
+		Nerd Fonts patches developer targeted fonts with a high number of glyphs
+		(icons). Specifically to add a high number of extra glyphs from popular
+		‘iconic fonts’ such as Font Awesome, Devicons, Octicons, and others.
+	</longdescription>
+	<upstream>
+		<maintainer>
+			<name>Ryan L. McIntyre</name>
+		</maintainer>
+		<changelog>https://github.com/ryanoasis/nerd-fonts/blob/master/changelog.md</changelog>
+		<bugs-to>https://github.com/ryanoasis/nerd-fonts/issues</bugs-to>
+		<remote-id type="github">ryanoasis/nerd-fonts</remote-id>
+	</upstream>
+	<use>
+		<flag name="3270">Install 3270</flag>
+		<flag name="agave">Install Agave</flag>
+		<flag name="anonymouspro">Install AnonymousPro</flag>
+		<flag name="arimo">Install Arimo</flag>
+		<flag name="aurulentsansmono">Install AurulentSansMono</flag>
+		<flag name="bigblueterminal">Install BigBlueTerminal</flag>
+		<flag name="bitstreamverasansmono">Install BitstreamVeraSansMono</flag>
+		<flag name="cascadiacode">Install CascadiaCode</flag>
+		<flag name="codenewroman">Install CodeNewRoman</flag>
+		<flag name="comicshannsmono">Install ComicShannsMono</flag>
+		<flag name="cousine">Install Cousine</flag>
+		<flag name="daddytimemono">Install DaddyTimeMono</flag>
+		<flag name="dejavusansmono">Install DejaVuSansMono</flag>
+		<flag name="droidsansmono">Install DroidSansMono</flag>
+		<flag name="envycoder">Install EnvyCodeR</flag>
+		<flag name="fantasquesansmono">Install FantasqueSansMono</flag>
+		<flag name="firacode">Install FiraCode</flag>
+		<flag name="firamono">Install FiraMono</flag>
+		<flag name="go-mono">Install Go-Mono</flag>
+		<flag name="gohu">Install Gohu</flag>
+		<flag name="hack">Install Hack</flag>
+		<flag name="hasklig">Install Hasklig</flag>
+		<flag name="heavydata">Install HeavyData</flag>
+		<flag name="hermit">Install Hermit</flag>
+		<flag name="ia-writer">Install iA-Writer</flag>
+		<flag name="ibmplexmono">Install IBMPlexMono</flag>
+		<flag name="inconsolata">Install Inconsolata</flag>
+		<flag name="inconsolatago">Install InconsolataGo</flag>
+		<flag name="inconsolatalgc">Install InconsolataLGC</flag>
+		<flag name="intelonemono">Install IntelOneMono</flag>
+		<flag name="iosevka">Install Iosevka</flag>
+		<flag name="iosevkaterm">Install IosevkaTerm</flag>
+		<flag name="jetbrainsmono">Install JetBrainsMono</flag>
+		<flag name="lekton">Install Lekton</flag>
+		<flag name="liberationmono">Install LiberationMono</flag>
+		<flag name="lilex">Install Lilex</flag>
+		<flag name="meslo">Install Meslo</flag>
+		<flag name="monofur">Install Monofur</flag>
+		<flag name="monoid">Install Monoid</flag>
+		<flag name="mononoki">Install Mononoki</flag>
+		<flag name="mplus">Install MPlus</flag>
+		<flag name="nerdfontssymbolsonly">Install NerdFontsSymbolsOnly</flag>
+		<flag name="noto">Install Noto</flag>
+		<flag name="opendyslexic">Install OpenDyslexic</flag>
+		<flag name="overpass">Install Overpass</flag>
+		<flag name="profont">Install ProFont</flag>
+		<flag name="proggyclean">Install ProggyClean</flag>
+		<flag name="robotomono">Install RobotoMono</flag>
+		<flag name="sharetechmono">Install ShareTechMono</flag>
+		<flag name="sourcecodepro">Install SourceCodePro</flag>
+		<flag name="spacemono">Install SpaceMono</flag>
+		<flag name="terminus">Install Terminus</flag>
+		<flag name="tinos">Install Tinos</flag>
+		<flag name="ubuntu">Install Ubuntu</flag>
+		<flag name="ubuntumono">Install UbuntuMono</flag>
+		<flag name="victormono">Install VictorMono</flag>
+		<flag name="otf">Install OTF variants of selected fonts</flag>
+		<flag name="ttf">Install TTF variants of selected fonts</flag>
+	</use>
+</pkgmetadata>
