@@ -3,6 +3,15 @@
 
 EAPI=8
 
+# Dependency Tarball Creation
+# ---------------------------
+# https://devmanual.gentoo.org/eclass-reference/go-module.eclass/index.html
+
+# git clone --depth 1 --branch v${PV} 'https://github.com/antonmedv/countdown'
+# cd countdown
+# GOMODCACHE="${PWD}"/go-mod go mod download -modcacherw
+# XZ_OPT='-T0 -9' tar -acf ${P}.deps.tar.xz go-mod
+
 DESCRIPTION="Terminal countdown timer"
 HOMEPAGE="https://github.com/antonmedv/countdown"
 
