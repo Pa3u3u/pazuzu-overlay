@@ -24,7 +24,7 @@ case "${PV}" in
 		inherit git-r3 go-module
 
 		BDEPEND="${BDEPEND}
-			=dev-lang/go-1.20"
+			>=dev-lang/go-1.20"
 
 		PATCHES=(
 			"${FILESDIR}/${P}-remove-pagination-limit.patch"
