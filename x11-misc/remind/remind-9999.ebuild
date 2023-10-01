@@ -17,7 +17,7 @@ DEPEND="
 	x11-libs/libnotify"
 RDEPEND="${DEPEND}"
 BDEPEND="
-	doc? ( || ( app-text/ronn app-text/ronn-ng ) )"
+	doc? ( app-text/ronn-ng )"
 
 inherit git-r3
 
