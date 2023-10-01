@@ -7,4 +7,7 @@
 		<description>Repository maintainer</description>
 	</maintainer>
 	<stabilize-allarches/>
+	<upstream>
+		<remote-id type="github">keybase/client</remote-id>
+	</upstream>
 </pkgmetadata>
