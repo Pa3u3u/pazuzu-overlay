@@ -16,7 +16,7 @@ DEPEND="
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
-PYTHON_COMPAT=( python3_{8,9,10,11} )
+PYTHON_COMPAT=( python3_{8,9,10,11,12} )
 
 DISTUTILS_USE_PEP517=poetry
 inherit git-r3 distutils-r1
