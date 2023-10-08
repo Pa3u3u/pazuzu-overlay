@@ -7,13 +7,15 @@ EAPI=8
 # ---------------------------
 # https://devmanual.gentoo.org/eclass-reference/go-module.eclass/index.html
 
-# git clone --depth 1 --branch v${PV} 'https://github.com/antonmedv/countdown'
+# git clone --depth 1 --branch v${PV} 'https://github.com/pa3u3u/countdown'
 # cd countdown
 # GOMODCACHE="${PWD}"/go-mod go mod download -modcacherw
 # XZ_OPT='-T0 -9' tar -acf ${P}.deps.tar.xz go-mod
 
 DESCRIPTION="Terminal countdown timer"
-HOMEPAGE="https://github.com/antonmedv/countdown"
+# The upstream project was deleted :/
+#HOMEPAGE="https://github.com/antonmedv/countdown"
+HOMEPAGE="https://github.com/pa3u3u/countdown"
 
 LICENSE="MIT"
 SLOT="0"
@@ -25,7 +27,7 @@ RDEPEND="${DEPEND}"
 BDEPEND="
 	>=dev-lang/go-1.20"
 
-go_name="github.com/antonmedv/countdown"
+go_name="github.com/pa3u3u/countdown"
 base_uri="https://${go_name}"
 
 inherit go-module
