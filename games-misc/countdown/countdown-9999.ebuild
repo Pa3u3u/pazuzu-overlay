@@ -13,9 +13,7 @@ EAPI=8
 # XZ_OPT='-T0 -9' tar -acf ${P}.deps.tar.xz go-mod
 
 DESCRIPTION="Terminal countdown timer"
-# The upstream project was deleted :/
-#HOMEPAGE="https://github.com/antonmedv/countdown"
-HOMEPAGE="https://github.com/Pa3u3u/countdown"
+HOMEPAGE="https://github.com/antonmedv/countdown"
 
 LICENSE="MIT"
 SLOT="0"
@@ -27,7 +25,7 @@ RDEPEND="${DEPEND}"
 BDEPEND="
 	>=dev-lang/go-1.20"
 
-go_name="github.com/Pa3u3u/countdown"
+go_name="github.com/antonmedv/countdown"
 base_uri="https://${go_name}"
 
 inherit go-module
