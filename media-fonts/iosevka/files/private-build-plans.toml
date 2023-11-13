@@ -24,3 +24,6 @@ export-glyph-names = true
 
   [buildPlans.iosevka-custom.ligations]
   inherits = "dlig"
+
+[collectPlans.iosevka-custom]
+from = ["iosevka-custom"]
