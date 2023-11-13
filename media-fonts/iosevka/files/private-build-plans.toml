@@ -1,0 +1,26 @@
+[buildPlans.iosevka-custom]
+family = "Iosevka"
+spacing = "normal"
+serifs = "sans"
+no-cv-ss = false
+export-glyph-names = true
+
+  [buildPlans.iosevka-custom.variants]
+  inherits = "ss09"
+
+    [buildPlans.iosevka-custom.variants.design]
+    capital-q = "detached-bend-tailed"
+    r = "serifless"
+    y = "cursive-serifless"
+    zero = "oval-slashed-split"
+    one = "base"
+    five = "upright-flat"
+    punctuation-dot = "round"
+    asterisk = "penta-low"
+    paren = "large-contour"
+    brace = "straight"
+    guillemet = "curly"
+    percent = "rings-continuous-slash"
+
+  [buildPlans.iosevka-custom.ligations]
+  inherits = "dlig"

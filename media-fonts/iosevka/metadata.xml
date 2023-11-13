@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>Roman Lacko</name>
+		<email>xlacko1@fi.muni.cz</email>
+		<description>Repository maintainer</description>
+	</maintainer>
+	<use>
+		<flag name="hinting">Enable font hinting</flag>
+		<flag name="ttc">Install the TrueType Collection font type</flag>
+		<flag name="ttf">Install the TrueType version of the font</flag>
+		<flag name="woff2">Install the WOFF2 version of the font</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">be5invis/Iosevka</remote-id>
+	</upstream>
+</pkgmetadata>
