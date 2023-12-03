@@ -15,7 +15,7 @@ SRC_URI="https://github.com/obsidianmd/obsidian-releases/releases/download/v${PV
 # The complete license overview is here: https://obsidian.md/license
 LICENSE="free-noncomm"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 
 RDEPEND="
 	app-accessibility/at-spi2-core:2
