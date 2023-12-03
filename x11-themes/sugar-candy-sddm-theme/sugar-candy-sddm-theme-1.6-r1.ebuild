@@ -9,7 +9,7 @@ SRC_URI="https://github.com/Kangie/sddm-sugar-candy/archive/refs/tags/v${PV}.tar
 
 LICENSE="GPL-3"
 SLOT="0"
-KEYWORDS="~amd64"
+KEYWORDS="amd64"
 
 RDEPEND="
 	>=x11-misc/sddm-0.15
