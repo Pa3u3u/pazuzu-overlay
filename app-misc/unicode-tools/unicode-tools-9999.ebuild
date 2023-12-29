@@ -27,13 +27,8 @@ BDEPEND=""
 
 REQUIRED_USE="|| ( unicode unifont u8str )"
 
-inherit git-r3
-
 EGIT_REPO_URI="https://gitlab.fi.muni.cz/xlacko1/unicode-tools/"
-
-if [ ${PV} != "9999" ]; then
-	EGIT_COMMIT="v${PV}"
-fi
+inherit git-r3
 
 src_compile() {
 	default
