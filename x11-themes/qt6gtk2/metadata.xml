@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>Roman Lacko</name>
+		<email>xlacko1@fi.muni.cz</email>
+		<description>Repository maintainer</description>
+	</maintainer>
+	<upstream>
+		<maintainer>
+			<name>Ilya Kotov</name>
+		</maintainer>
+		<remote-id type="github">trialuser02/qt6gtk2</remote-id>
+	</upstream>
+</pkgmetadata>
