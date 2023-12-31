@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>Roman Lacko</name>
+		<email>xlacko1@fi.muni.cz</email>
+		<description>Repository maintainer</description>
+	</maintainer>
+	<use>
+		<flag name="light">Install the light theme</flag>
+		<flag name="dark">Install the dark theme</flag>
+		<flag name="black">Install the black color variant</flag>
+		<flag name="blue">Install the blue color variant</flag>
+		<flag name="brown">Install the brown color variant</flag>
+		<flag name="cyan">Install the cyan color variant</flag>
+		<flag name="green">Install the green color variant</flag>
+		<flag name="grey">Install the grey color variant</flag>
+		<flag name="magenta">Install the magenta color variant</flag>
+		<flag name="orange">Install the orange color variant</flag>
+		<flag name="red">Install the red color variant</flag>
+		<flag name="teal">Install the teal color variant</flag>
+		<flag name="violet">Install the violet color variant</flag>
+		<flag name="white">Install the white color variant</flag>
+		<flag name="yellow">Install the yellow color variant</flag>
+		<flag name="cinnamon">Install theme for <pkg>gnome-extra/cinnamon</pkg></flag>
+		<flag name="gnome-shell">Install theme for <pkg>gnome-base/gnome</pkg></flag>
+		<flag name="gtk2">Install theme for <pkg>x11-libs/gtk+</pkg>:2</flag>
+		<flag name="gtk3">Install theme for <pkg>x11-libs/gtk+</pkg>:3</flag>
+		<flag name="metacity">Install theme for <pkg>x11-wm/metacity</pkg></flag>
+		<flag name="xfwm4">Install theme for <pkg>xfce-base/xfwm4</pkg></flag>
+	</use>
+	<upstream>
+		<remote-id type="github">daniruiz/skeuos-gtk</remote-id>
+	</upstream>
+</pkgmetadata>
