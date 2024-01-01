@@ -11,8 +11,6 @@ LICENSE="GPL-3"
 SLOT="0"
 KEYWORDS="amd64"
 
-DEPEND=""
-RDEPEND="${DEPEND}"
 BDEPEND="
 	dev-lang/sassc
 	media-gfx/inkscape
@@ -63,8 +61,7 @@ src_unpack() {
 }
 
 src_compile() {
-	#emake build
-	echo "Nothing to be installed"
+	emake build
 }
 
 src_install() {
@@ -72,7 +69,7 @@ src_install() {
 
 	for color in ${THEME_COLORS[*]}; do
 		for style in ${THEME_STYLES[*]}; do
-			if [ "${color}-{$style}" = "white-light" ] || [ "${color}-${style}" = "black-dark" ]; then
+			if [ "${color}-${style}" = "white-light" ] || [ "${color}-${style}" = "black-dark" ]; then
 				continue
 			fi
 
