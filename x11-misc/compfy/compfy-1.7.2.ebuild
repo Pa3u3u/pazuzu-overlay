@@ -61,6 +61,8 @@ BDEPEND="
 
 DOCS=( README.md compfy.sample.conf )
 
+EMESON_BUILDTYPE="release"
+
 src_configure() {
 	local emesonargs=(
 		$(meson_use config-file config_file)
