@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<name>Roman Lacko</name>
+		<email>xlacko1@fi.muni.cz</email>
+		<description>Repository maintainer</description>
+	</maintainer>
+	<use>
+		<flag name="config-file">Enable config file support</flag>
+		<flag name="drm">Enable support for using drm for vsync</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">allusive-dev/compfy</remote-id>
+	</upstream>
+</pkgmetadata>
