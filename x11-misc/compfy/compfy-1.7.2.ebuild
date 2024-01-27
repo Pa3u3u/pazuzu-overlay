@@ -56,7 +56,6 @@ RDEPEND="
 
 BDEPEND="
 	app-alternatives/ninja
-	dev-util/meson
 "
 
 DOCS=( README.md compfy.sample.conf )

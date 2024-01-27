@@ -15,7 +15,6 @@ DEPEND="
 RDEPEND="${DEPEND}"
 BDEPEND="
 	app-arch/unzip
-	=dev-util/cmake-3*
 "
 
 SRC_URI="https://github.com/nielssp/colorgrab/archive/refs/tags/v${PV}.tar.gz -> ${P}.tar.gz"

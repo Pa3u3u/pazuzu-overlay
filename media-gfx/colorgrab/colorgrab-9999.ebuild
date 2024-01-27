@@ -15,7 +15,6 @@ DEPEND="
 RDEPEND="${DEPEND}"
 BDEPEND="
 	app-arch/unzip
-	=dev-util/cmake-3*
 "
 
 case "${PV}" in
