@@ -1,4 +1,4 @@
-# Copyright 2023 Gentoo Authors
+# Copyright 2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -36,7 +36,7 @@ REQUIRED_USE="|| ( ttf woff2 )"
 
 MY_PN="Iosevka"
 MY_P="${MY_PN}-${PV}"
-MY_FONT="iosevka-custom"
+MY_FONT="Iosevka"
 
 KEYWORDS="amd64 x86"
 
@@ -99,14 +99,14 @@ src_compile() {
 src_install() {
 	mode=""
 	if use "!hinting"; then
-		mode="-unhinted"
+		mode="-Unhinted"
 	fi
 
 	for font in ttf woff2; do
 		use "$font" || continue
 
 		elog "Installing ${font}${mode}"
-		FONT_S="${S}/dist/$MY_FONT/${font}${mode}" FONT_SUFFIX="$font" \
+		FONT_S="${S}/dist/$MY_FONT/${font@U}${mode}" FONT_SUFFIX="$font" \
 			font_src_install
 	done
 

@@ -1,0 +1,24 @@
+[buildPlans.Iosevka]
+family = "Iosevka"
+spacing = "normal"
+serifs = "sans"
+noCvSs = false
+exportGlyphNames = true
+
+  [buildPlans.Iosevka.variants]
+  inherits = "ss09"
+
+    [buildPlans.Iosevka.variants.design]
+    capital-d = "standard-serifless"
+    capital-q = "detached-bend-tailed"
+    i = "serifed-semi-tailed"
+    r = "serifless"
+    y = "cursive-serifless"
+    zero = "oval-slashed-split"
+    one = "base"
+    five = "upright-flat"
+    punctuation-dot = "round"
+    asterisk = "penta-low"
+    brace = "straight"
+    guillemet = "curly"
+    percent = "rings-continuous-slash"
