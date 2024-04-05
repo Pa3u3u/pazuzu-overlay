@@ -76,6 +76,7 @@
 		<flag name="overpass">Install Overpass</flag>
 		<flag name="profont">Install ProFont</flag>
 		<flag name="proggyclean">Install ProggyClean</flag>
+		<flag name="recursive">Install RecursiveMono</flag>
 		<flag name="robotomono">Install RobotoMono</flag>
 		<flag name="sharetechmono">Install ShareTechMono</flag>
 		<flag name="sourcecodepro">Install SourceCodePro</flag>
@@ -85,6 +86,8 @@
 		<flag name="ttf">Install TTF variants of selected fonts</flag>
 		<flag name="ubuntu">Install Ubuntu</flag>
 		<flag name="ubuntumono">Install UbuntuMono</flag>
+		<flag name="ubuntusans">Install UbuntuSans</flag>
 		<flag name="victormono">Install VictorMono</flag>
+		<flag name="zedmono">Install ZedMono</flag>
 	</use>
 </pkgmetadata>
