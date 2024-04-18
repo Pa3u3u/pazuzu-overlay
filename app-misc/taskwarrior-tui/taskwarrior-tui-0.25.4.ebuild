@@ -214,7 +214,9 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="amd64"
 
-DEPEND=""
+DEPEND="
+	=app-misc/task-2*
+"
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
