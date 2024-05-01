@@ -1,0 +1,10 @@
+# Copyright 1999-2024 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+# Roman Lacko <xlacko1@fi.muni.cz> (2024-05-01)
+# Complete Nerd Fonts has a lot of distfiles, most of which are never used.
+# Replaced with 'media-fonts/nerd-fonts-symbols' which only installs
+# NerdFontsSymbolsOnly. If additional fonts are needed, one can copy and modify
+# this ebuild.
+# Removal in 180 days.
+media-fonts/nerd-fonts
