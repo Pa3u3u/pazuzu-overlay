@@ -13,12 +13,6 @@ HOMEPAGE="
 	https://pypi.org/project/argopt/
 "
 
-RDEPENDS="
-	>=dev-python/argopt-0.8
-	>=dev-python/tabulate-0.9
-	>=dev-python/tqdm-4
-"
-
 LICENSE="MPL-2.0"
 SLOT="0"
 KEYWORDS="~amd64"
