@@ -24,7 +24,7 @@ LICENSE="GPL-2"
 
 RDEPEND="
 	x11-libs/gtk+:3
-	dev-libs/libappindicator:3
+	>=dev-libs/libayatana-appindicator-0.5
 	x11-libs/libX11
 	>=x11-apps/xinput-1.3
 "
