@@ -12,10 +12,10 @@ DESCRIPTION="Gromit-MPX is a multi-pointer GTK3 port of the Gromit desktop annot
 HOMEPAGE="https://github.com/bk138/gromit-mpx"
 
 SRC_URI="https://github.com/bk138/${PN}/archive/${PV}.tar.gz -> ${P}.tar.gz"
-KEYWORDS="amd64 x86"
-
-SLOT="0"
 LICENSE="GPL-2"
+SLOT="0"
+
+KEYWORDS="amd64 x86"
 
 RDEPEND="
 	x11-libs/gtk+:3
