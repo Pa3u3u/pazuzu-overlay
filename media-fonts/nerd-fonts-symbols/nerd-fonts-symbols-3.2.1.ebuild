@@ -21,8 +21,6 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
 
-DEPEND=""
-RDEPEND="${DEPEND}"
 BDEPEND="app-arch/xz-utils"
 
 src_unpack() {
@@ -38,4 +36,17 @@ src_install() {
 	FONT_SUFFIX="ttf"
 	FONT_CONF=("${S}/10-nerd-font-symbols.conf")
 	font_src_install
+}
+
+pkg_postinst() {
+	einfo "After installing Nerd Fonts Symbols, make sure to set up or update"
+	einfo "symbol mappings where necessary:"
+	einfo ""
+	einfo "    https://github.com/ryanoasis/nerd-fonts/wiki/Glyph-Sets-and-Code-Points"
+	einfo ""
+	einfo "If you use x11-terms/kitty, you might find the symbol_map settings here:"
+	einfo ""
+	einfo "    https://sw.kovidgoyal.net/kitty/faq/#kitty-is-not-able-to-use-my-favorite-font"
+	einfo ""
+	einfo "In both cases, ensure the mappings are for version ${PV}."
 }
