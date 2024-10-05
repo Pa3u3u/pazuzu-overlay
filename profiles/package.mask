@@ -26,3 +26,8 @@ sec-keys/openpgp-keys-keybaseio
 #     x11-themes/sddm-eucalyptus-drop-theme
 # Removal in 180 days.
 x11-themes/sugar-candy-sddm-theme
+
+# Roman Lacko <xlacko1@fi.muni.cz> (2024-10-05)
+# Superseded by 'media-fonts/symbols-nerd-font' in Portage.
+# Removal in 180 days.
+media-fonts/nerd-fonts-symbols
