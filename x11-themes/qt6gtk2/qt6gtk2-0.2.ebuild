@@ -5,11 +5,12 @@ EAPI=8
 
 DESCRIPTION="GTK+2.0 integration plugins for Qt6"
 HOMEPAGE="https://github.com/trialuser02/qt6gtk2"
+
+SRC_URI="https://github.com/trialuser02/${PN}/releases/download/${PV}/${P}.tar.xz"
+
 LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS="amd64"
-
-SRC_URI="https://github.com/trialuser02/${PN}/releases/download/${PV}/${P}.tar.xz"
 
 RDEPEND="dev-qt/qtbase:6=
 	x11-libs/gtk+:2
