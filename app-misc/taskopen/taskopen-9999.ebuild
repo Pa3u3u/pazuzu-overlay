@@ -10,7 +10,7 @@ LICENSE="GPL-2"
 SLOT="0"
 
 if [ "$PV" = "9999" ]; then
-	EGIT_REPO_URI="https://github.com/jschlatow/taskopen?tab=readme-ov-file"
+	EGIT_REPO_URI="https://github.com/jschlatow/taskopen"
 	inherit git-r3
 else
 	KEYWORDS="~amd64"
