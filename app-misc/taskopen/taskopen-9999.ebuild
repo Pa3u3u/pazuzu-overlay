@@ -24,3 +24,7 @@ RDEPEND="${DEPEND}"
 BDEPEND="
 	>=dev-lang/nim-1.4.0
 "
+
+src_compile() {
+	emake VERSION=v$PV
+}
