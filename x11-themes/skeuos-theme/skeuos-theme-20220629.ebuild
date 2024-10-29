@@ -60,12 +60,9 @@ src_unpack() {
 	mv "skeuos-gtk-${PV}" "${P}" || die
 }
 
-src_compile() {
-	emake build
-}
-
-src_install() {
-	insinto /usr/share/themes
+src_configure() {
+	mv "themes" "themes-all"
+	mkdir "themes"
 
 	for color in ${THEME_COLORS[*]}; do
 		for style in ${THEME_STYLES[*]}; do
@@ -74,16 +71,36 @@ src_install() {
 			fi
 
 			if use ${color} && use ${style}; then
-				doins -r themes/"Skeuos-${color^}-${style^}"
+				mv themes{-all,}/"Skeuos-${color^}-${style^}"
 
 				if use xfwm4; then
-					doins -r themes/"Skeuos-${color^}-${style^}"-XFWM*
+					mv themes{-all,}/"Skeuos-${color^}-${style^}"-XFWM*
 				fi
 
 				if use gnome-shell; then
-					doins -r themes/"Skeuos-${color^}-${style^}"{,-FullPanel}-GNOME*
+					mv themes{-all,}/"Skeuos-${color^}-${style^}"{,-FullPanel}-GNOME*
 				fi
 			fi
 		done
+	done
+}
+
+src_compile() {
+	COLOR_VARIANTS=()
+	for color in ${THEME_COLORS[*]}; do
+		if use "$color"; then
+			COLOR_VARIANTS+=("${color^}")
+		fi
+	done
+
+	echo "${COLOR_VARIANTS[*]}"
+	emake build COLOR_VARIANTS="${COLOR_VARIANTS[*]}"
+}
+
+src_install() {
+	insinto /usr/share/themes
+
+	for theme in themes/*; do
+		doins -r "$theme"
 	done
 }
