@@ -12,6 +12,8 @@ DESCRIPTION="A second brain, for you, forever"
 HOMEPAGE="https://obsidian.md"
 SRC_URI="https://github.com/obsidianmd/obsidian-releases/releases/download/v${PV}/${PN}_${PV}_amd64.deb"
 
+S="${WORKDIR}"
+
 # The complete license overview is here: https://obsidian.md/license
 LICENSE="free-noncomm"
 SLOT="0"
@@ -41,8 +43,6 @@ RDEPEND="
 	x11-libs/libxkbcommon
 	x11-libs/pango
 "
-
-S="${WORKDIR}"
 
 src_prepare() {
 	default
