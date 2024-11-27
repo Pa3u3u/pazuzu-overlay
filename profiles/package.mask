@@ -2,17 +2,6 @@
 # Distributed under the terms of the GNU General Public License v2
 
 # Roman Lacko <xlacko1@fi.muni.cz> (2024-06-02)
-# Keybase is essentially dead:
-# - Only hotfix PRs are merged, sometimes causing downtimes
-# - The Issues page is parade of spam
-# - Little to no activity:
-#   - https://github.com/keybase/client/issues/24577
-#   - https://github.com/keybase/client/issues/24303
-# Removal in 180 days.
-app-crypt/keybase
-sec-keys/openpgp-keys-keybaseio
-
-# Roman Lacko <xlacko1@fi.muni.cz> (2024-06-02)
 # This SDDM theme is no longer maintained and does not work with Qt6.
 # A fork with portability fixes has been created:
 #     x11-themes/sddm-eucalyptus-drop-theme
