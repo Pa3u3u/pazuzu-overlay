@@ -1,0 +1,22 @@
+diff --git a/main.go b/main.go
+index 2ffe5df..d51cc97 100644
+--- a/main.go
++++ b/main.go
+@@ -26,6 +26,7 @@ import (
+ 	"log"
+ 	"net/http"
+ 	"os"
++	"path/filepath"
+ 
+ 	_ "github.com/mattn/go-sqlite3"
+ )
+@@ -64,6 +65,9 @@ func main() {
+ 		os.Exit(1)
+ 	}
+ 
++	os.MkdirAll(keyDirectoryPath, 0700)
++	os.MkdirAll(filepath.Dir(dbPath), 0755)
++
+ 	switch os.Args[1] {
+ 	case "start":
+ 		_ = startCmd.Parse(os.Args[2:])
