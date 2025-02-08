@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>roman.lacko92@gmail.com</email>
+		<name>Roman Lacko</name>
+	</maintainer>
+	<use>
+		<flag name="gamemode">Install games-util/gamemode to optimise performance on demand</flag>
+		<flag name="gvfs">Install gnome-base/gvfs</flag>
+		<flag name="vkd3d">Install app-emulation/vkd3d library</flag>
+		<flag name="vkd3d-proton">Install app-emulation/vkd3d-proton library</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">bottlesdevs/Bottles</remote-id>
+	</upstream>
+</pkgmetadata>
