@@ -44,6 +44,7 @@ DEPEND="
 	gui-libs/gtk:4
 	gui-libs/gtksourceview:5
 	gui-libs/libadwaita
+	media-gfx/icoextract
 	media-gfx/imagemagick
 	media-gfx/vkBasalt
 	x11-apps/xdpyinfo
@@ -95,9 +96,3 @@ pkg_postrm() {
 	gnome2_schemas_update
 	xdg_desktop_database_update
 }
-
-#epends=(
-#  python-fvs
-#  python-steamgriddb
-#  vkbasalt-cli
-#)
