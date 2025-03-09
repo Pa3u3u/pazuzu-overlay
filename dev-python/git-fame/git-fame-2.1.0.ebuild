@@ -19,8 +19,8 @@ RDEPEND="
 	>=dev-python/tqdm-4
 "
 
-SRC_URI="$(pypi_sdist_url --no-normalize "${PN}" "${PV}")"
-S="${WORKDIR}/${P}"
+SRC_URI="$(pypi_sdist_url "${PN^}" "${PV}")"
+S="${WORKDIR}/$(pypi_normalize_name ${PN})-${PV}"
 
 LICENSE="MPL-2.0"
 SLOT="0"
