@@ -1,11 +1,6 @@
 # Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-# Roman Lacko <xlacko1@fi.muni.cz> (2024-10-05)
-# Superseded by 'media-fonts/symbols-nerd-font' in Portage.
-# Removal in 180 days.
-media-fonts/nerd-fonts-symbols
-
 # Roman Lacko <xlacko1@fi.muni.cz> (2025-03-29)
 # Appears unmaintaned.
 # Removal in 180 days.
