@@ -27,6 +27,7 @@ DEPEND="
 	dev-python/ifaddr
 	dev-python/netaddr
 	dev-python/netifaces
+	dev-python/protobuf
 	>=dev-python/python3-xapp-1.6
 	dev-python/qrcode
 	dev-python/setproctitle
