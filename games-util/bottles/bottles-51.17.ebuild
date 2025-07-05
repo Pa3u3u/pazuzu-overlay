@@ -44,7 +44,7 @@ DEPEND="
 	gui-libs/gtk:4
 	gui-libs/gtksourceview:5
 	gui-libs/libadwaita
-	media-gfx/icoextract
+	|| ( media-gfx/icoextract dev-python/icoextract )
 	media-gfx/imagemagick
 	media-gfx/vkBasalt
 	x11-apps/xdpyinfo
