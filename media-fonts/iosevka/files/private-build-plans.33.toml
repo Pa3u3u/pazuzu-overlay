@@ -1,7 +1,7 @@
 [buildPlans.Iosevka]
 family = "Iosevka"
 spacing = "term"
-serifs = "sans"
+serifs = "slab"
 noCvSs = false
 exportGlyphNames = true
 
@@ -10,14 +10,28 @@ exportGlyphNames = true
 
     [buildPlans.Iosevka.variants.design]
     one = "base"
-    two = "curly-neck-serifless"
-    four = "semi-open-serifless"
-    five = "upright-flat-serifless"
+    two = "curly-neck-serifed"
     zero = "oval-slashed"
-    capital-d = "standard-serifless"
     capital-q = "closed-swash"
+    g = "single-storey-serifed"
     i = "serifed-semi-tailed"
-    r = "hookless-top-serifed"
+    punctuation-dot = "round"
+    braille-dot = "round"
+    asterisk = "penta-low"
+    paren = "large-contour"
+    brace = "straight"
+    guillemet = "curly"
+    percent = "rings-continuous-slash"
+    lig-neq = "slightly-slanted-dotted"
+
+    [buildPlans.Iosevka.variants.italic]
+    one = "base"
+    two = "curly-neck-serifed"
+    zero = "oval-slashed"
+    capital-q = "closed-swash"
+    f = "flat-hook-tailed"
+    g = "single-storey-serifed"
+    i = "serifed-semi-tailed"
     punctuation-dot = "round"
     asterisk = "penta-low"
     paren = "large-contour"
@@ -28,34 +42,7 @@ exportGlyphNames = true
   [buildPlans.Iosevka.ligations]
   inherits = "dlig"
 
-[buildPlans.Iosevka.weights.Regular]
-shape = 400
-menu = 400
-css = 400
-
-[buildPlans.Iosevka.weights.Bold]
-shape = 700
-menu = 700
-css = 700
-
-[buildPlans.Iosevka.weights.ExtraLight]
-shape = 200
-menu = 200
-css = 200
-
-[buildPlans.Iosevka.weights.Light]
-shape = 300
-menu = 300
-css = 300
-
-[buildPlans.Iosevka.slopes.Upright]
-angle = 0
-shape = "upright"
-menu = "upright"
+[buildPlans.Iosevka.widths.Normal]
+shape = 500
+menu = 5
 css = "normal"
-
-[buildPlans.Iosevka.slopes.Italic]
-angle = 9.4
-shape = "italic"
-menu = "italic"
-css = "italic"
