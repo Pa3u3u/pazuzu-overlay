@@ -1,7 +1,2 @@
 # Copyright 1999-2024 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
-
-# Roman Lacko <xlacko1@fi.muni.cz> (2025-03-29)
-# With removal of media-sound/spotify-tui, this package is of no more use.
-# Removal in 180 days.
-media-sound/spotifyd
