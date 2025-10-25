@@ -215,7 +215,7 @@ SLOT="0"
 KEYWORDS="amd64"
 
 DEPEND="
-	=app-misc/task-2*
+	=app-misc/task-3*
 "
 RDEPEND="${DEPEND}"
 BDEPEND=""
