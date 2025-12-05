@@ -27,24 +27,31 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 DEPEND="
 	app-arch/cabextract
 	app-arch/p7zip
-	app-arch/patool
+	>=app-arch/patool-3.0.0
 	dev-lang/python
 	dev-libs/libportal[gtk]
-	dev-python/chardet
-	dev-python/fvs
-	dev-python/markdown
-	dev-python/orjson
-	dev-python/pathvalidate
-	dev-python/pycurl
-	dev-python/pygobject
-	dev-python/pyyaml
-	dev-python/requests
+	>=dev-python/certifi-2024.8.30
+	>=dev-python/chardet-5.2.0
+	>=dev-python/charset-normalizer-3.3.2
+	>=dev-python/fvs-0.3.4
+	>=dev-python/icoextract-0.1.5
+	>=dev-python/idna-3.10
+	>=dev-python/markdown-3.7
+	>=dev-python/orjson-3.10.7
+	>=dev-python/pathvalidate-3.2.1
+	>=dev-python/pefile-2024.8.26
+	>=dev-python/pycairo-1.27.0
+	>=dev-python/pycurl-7.45.3
+	>=dev-python/pygobject-3.50.0
+	>=dev-python/pyyaml-6.0.2
+	>=dev-python/requests-2.32.3
+	>=dev-python/urllib3-2.2.3
 	dev-python/vkbasalt-cli
+	>=dev-python/wheel-0.44.0
 	gnome-base/dconf
 	gui-libs/gtk:4
 	gui-libs/gtksourceview:5
 	>=gui-libs/libadwaita-1.7
-	|| ( media-gfx/icoextract dev-python/icoextract )
 	media-gfx/imagemagick
 	media-gfx/vkBasalt
 	x11-apps/xdpyinfo
@@ -66,8 +73,7 @@ BDEPEND="
 "
 
 PATCHES=(
-	"${FILESDIR}/allow-non-flatpak-51.20.patch"
-	"${FILESDIR}/disable-flatpak-check.patch"
+	"${FILESDIR}/no-flatpak-60.1.patch"
 )
 
 EMESON_BUILDTYPE="release"
