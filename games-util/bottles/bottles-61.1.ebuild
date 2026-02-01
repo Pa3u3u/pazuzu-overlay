@@ -18,7 +18,6 @@ KEYWORDS="~amd64"
 IUSE="
 	gamemode
 	+gvfs
-	vkd3d
 	vkd3d-proton
 "
 
@@ -63,7 +62,6 @@ RDEPEND="
 	${PYTHON_DEPS}
 	gamemode? ( games-util/gamemode )
 	gvfs? ( gnome-base/gvfs )
-	vkd3d? ( app-emulation/vkd3d )
 	vkd3d-proton? ( app-emulation/vkd3d-proton )
 "
 BDEPEND="
@@ -73,8 +71,7 @@ BDEPEND="
 "
 
 PATCHES=(
-	"${FILESDIR}/allow-non-flatpak-52.0.patch"
-	"${FILESDIR}/disable-flatpak-check.patch"
+	"${FILESDIR}/no-flatpak-60.1.patch"
 )
 
 EMESON_BUILDTYPE="release"
