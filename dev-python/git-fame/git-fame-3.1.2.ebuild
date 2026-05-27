@@ -16,7 +16,7 @@ HOMEPAGE="
 RDEPEND="
 	>=dev-python/argopt-0.8
 	>=dev-python/tabulate-0.9
-	>=dev-python/tqdm-4
+	>=dev-python/tqdm-4.44
 "
 
 SRC_URI="$(pypi_sdist_url "${PN^}" "${PV}")"
