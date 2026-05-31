@@ -13,9 +13,8 @@ KEYWORDS="amd64"
 
 DEPEND="
 	>=dev-qt/qt5compat-6.7
-	>=dev-qt/qtgraphicaleffects-5.11
-	>=dev-qt/qtquickcontrols2-5.11
-	>=dev-qt/qtsvg-5.11
+	>=dev-qt/qtdeclarative-6.7
+	>=dev-qt/qtsvg-6.7
 	>=x11-misc/sddm-0.18
 "
 RDEPEND="${DEPEND}"
