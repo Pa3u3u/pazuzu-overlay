@@ -1,0 +1,13 @@
+diff --git a/lights-out.service b/lights-out.service
+index 7425915..78260fd 100644
+--- a/lights-out.service
++++ b/lights-out.service
+@@ -4,7 +4,7 @@ After=graphical-session.target
+ PartOf=graphical-session.target
+ 
+ [Service]
+-ExecStart=%h/.local/bin/lights-out
++ExecStart=/usr/bin/lights-out
+ Restart=on-failure
+ 
+ [Install]
