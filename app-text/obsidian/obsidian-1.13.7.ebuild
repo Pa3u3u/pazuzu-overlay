@@ -56,7 +56,7 @@ src_install() {
 	doins -r opt/Obsidian/*
 
 	# Desktop file
-	domenu usr/share/applications/obsidian.desktop
+	domenu usr/share/applications/md.obsidian.Obsidian.desktop
 
 	# Icons
 	for size in 16 32 48 64 128 256 512; do
