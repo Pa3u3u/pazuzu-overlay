@@ -15,7 +15,7 @@ DEPEND="
 	>=dev-qt/qt5compat-6.7
 	>=dev-qt/qtdeclarative-6.7
 	>=dev-qt/qtsvg-6.7
-	>=x11-misc/sddm-0.18
+	>=gui-apps/sddm-0.18
 "
 RDEPEND="${DEPEND}"
 
