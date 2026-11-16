@@ -304,6 +304,7 @@ inherit cargo
 DESCRIPTION="A Taskwarrior Terminal User Interface"
 HOMEPAGE="https://kdheepak.com/taskwarrior-tui"
 SRC_URI="
+	https://github.com/kdheepak/$PN/archive/refs/tags/v$PV.tar.gz -> $P.tar.gz
 	${CARGO_CRATE_URIS}
 "
 
