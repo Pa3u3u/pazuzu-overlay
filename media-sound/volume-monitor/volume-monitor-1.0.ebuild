@@ -11,10 +11,6 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 
-IUSE="
-	+systemd
-"
-
 DEPEND="
 	media-libs/libpulse[dbus]
 	media-sound/pulseaudio-daemon[dbus]
@@ -33,12 +29,10 @@ inherit systemd
 src_install() {
 	dobin volume-monitor
 
-	if use systemd; then
-		systemd_douserunit volume-monitor.service
+	systemd_douserunit volume-monitor.service
 
-		elog "Remember to start the service:"
-		elog
-		elog "    systemctl --user enable --now volume-monitor.service"
-		elog
-	fi
+	elog "Remember to enable and start the service:"
+	elog
+	elog "    systemctl --user enable --now volume-monitor.service"
+	elog
 }
