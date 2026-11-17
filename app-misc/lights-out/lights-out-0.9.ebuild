@@ -152,8 +152,6 @@ LICENSE+=" Apache-2.0 GPL-2 MIT Unicode-3.0"
 SLOT="0"
 KEYWORDS="~amd64"
 
-IUSE="systemd"
-
 PATCHES=(
 	"${FILESDIR}/lights-out-service.patch"
 )
@@ -161,8 +159,9 @@ PATCHES=(
 src_install() {
 	dobin "target/release/lights-out"
 
-	if use systemd; then
-		systemd_douserunit "lights-out.service"
-		elog "Systemd user service is installed in $(systemd_get_userunitdir)."
-	fi
+	systemd_douserunit "lights-out.service"
+	elog "Remember to enable and start the service:"
+	elog
+	elog "    systemctl --user enable --now lights-out.service"
+	elog
 }
