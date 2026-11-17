@@ -15,8 +15,6 @@ DEPEND="x11-libs/libX11"
 RDEPEND="${DEPEND}"
 BDEPEND=""
 
-IUSE="systemd"
-
 inherit systemd linux-info
 
 pkg_setup() {
@@ -27,29 +25,27 @@ pkg_setup() {
 src_install() {
 	dobin "droidmote"
 
-	if use systemd; then
-		systemd_douserunit droidmote.service
+	systemd_douserunit droidmote.service
 
-		elog "Systemd user service is installed in $(systemd_get_userunitdir)."
-		elog "Before running the service, setup password as follows:"
-		elog
-		elog "    systemd --user edit droidmote.service"
-		elog
-		elog "In the editor, put this in the override section:"
-		elog
-		elog "    [Service]"
-		elog "    Environment=DROIDMOTE_PASSWORD=‹Your password here›"
-		elog
-		elog "The default port is set to 2302. If you wish, you can override it"
-		elog "along with the password, just add another line:"
-		elog
-		elog "    Environment=DROIDMOTE_PORT=‹Custom port here›"
-		elog
-		elog "Close the editor and start the service:"
-		elog
-		elog "    systemctl --user enable --now droidmote"
-		elog
-		ewarn "The password will be visible in process listing."
-		ewarn "There is currently no way around this."
-	fi
+	elog "Systemd user service is installed in $(systemd_get_userunitdir)."
+	elog "Before running the service, setup password as follows:"
+	elog
+	elog "    systemd --user edit droidmote.service"
+	elog
+	elog "In the editor, put this in the override section:"
+	elog
+	elog "    [Service]"
+	elog "    Environment=DROIDMOTE_PASSWORD=‹Your password here›"
+	elog
+	elog "The default port is set to 2302. If you wish, you can override it"
+	elog "along with the password, just add another line:"
+	elog
+	elog "    Environment=DROIDMOTE_PORT=‹Custom port here›"
+	elog
+	elog "Close the editor and start the service:"
+	elog
+	elog "    systemctl --user enable --now droidmote"
+	elog
+	ewarn "The password will be visible in process listing."
+	ewarn "There is currently no way around this."
 }
