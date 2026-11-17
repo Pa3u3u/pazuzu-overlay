@@ -11,17 +11,15 @@ LICENSE="MIT"
 SLOT="0"
 KEYWORDS="~amd64"
 
-DEPEND="
-	media-libs/libpulse[dbus]
-	media-sound/pulseaudio-daemon[dbus]
-	x11-libs/libnotify
-"
+DEPEND=""
 
 RDEPEND="
 	${DEPEND}
+	|| ( media-video/pipewire[sound-server] media-sound/pulseaudio-daemon )
 	dev-python/dbus-next
 	dev-python/pulsectl
 	dev-python/pulsectl-asyncio
+	x11-libs/libnotify
 "
 
 inherit systemd
