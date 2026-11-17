@@ -24,8 +24,6 @@ PATCHES=(
 	"${FILESDIR}/paths.patch"
 )
 
-IUSE="systemd"
-
 src_unpack() {
 	default
 	cp "${FILESDIR}/${P}.service" "$S/${PN}.service"
@@ -38,9 +36,12 @@ src_compile() {
 src_install() {
 	dobin timew-sync-server
 
-	if use systemd; then
-		systemd_dounit timew-sync-server.service
-	fi
+	elog "Remember to enable and start the service:"
+	elog
+	elog "    systemctl --user enable --now timew-sync-server.service"
+	elog
+
+	systemd_dounit timew-sync-server.service
 
 	default
 }
