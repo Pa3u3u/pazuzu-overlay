@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>xlacko1@fi.muni.cz</email>
+		<name>Roman Lacko</name>
+	</maintainer>
+	<use>
+		<flag name="completions">Install bash, fish and zsh completions</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">magic-wormhole/magic-wormhole</remote-id>
+	</upstream>
+</pkgmetadata>

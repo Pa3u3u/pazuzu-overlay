@@ -1,0 +1,10 @@
+--- magic-wormhole-0.24.0/setup.py.orig	2026-11-23 18:22:44.132422354 +0100
++++ magic-wormhole-0.24.0/setup.py	2026-11-23 18:22:48.588653173 +0100
+@@ -37,7 +37,6 @@
+                 "wormhole.test",
+                 "wormhole.test.dilate",
+                 ],
+-      data_files=[(".", ["wormhole_complete.bash", "wormhole_complete.zsh", "wormhole_complete.fish"])],
+       entry_points={
+           "console_scripts":
+           [
